@@ -1,17 +1,19 @@
 import React from "react";
+import  labels  from "../../labels";
 import ButtonPrimary from "../Buttons/ButtonPrimary";
 import './Header.scss';
 
 const Header = ()=>{
+
+    const buttonType = 'button';
+    const buttonClass= 'primary'
     return(
         <header>
             <h1>Join the exploration space</h1>
             <ButtonPrimary
-                // buttonLabel?: string;
-                // customClassName: string;
-                // type: 'submit' | 'reset' | 'button';
-                // isDisabled?: boolean;
-                // onClick?: () => void;
+                buttonLabel={labels.header.buttonLabel}
+                customClassName={buttonClass}
+                type={buttonType}
 />
         </header>
     )
