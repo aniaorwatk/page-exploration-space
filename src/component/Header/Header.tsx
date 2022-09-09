@@ -9,7 +9,7 @@ const Header = ()=>{
     const buttonClass= 'primary'
     return(
         <header>
-            <h1>Join the exploration space</h1>
+            <h1>{labels.header.title}</h1>
             <ButtonPrimary
                 buttonLabel={labels.header.buttonLabel}
                 customClassName={buttonClass}
