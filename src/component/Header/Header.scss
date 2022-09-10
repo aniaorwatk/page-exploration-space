@@ -1,11 +1,17 @@
 @import "../../scss/Main";
 
 header{
+    display: flex;
+    flex-direction: column;
     min-width: 100vw;
     min-height: 40vh;
-
     background-image: url("../../assets/photo/guillermo-ferla-Oze6U2m1oYU-unsplash.jpg");
     background-size: cover;
     background-position: center;
+
+    button{
+align-self: flex-end;
+
+    }
 
 }
