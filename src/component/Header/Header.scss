@@ -1,0 +1,21 @@
+@import "../../scss/Main";
+
+header{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    padding: 1rem;
+    min-width: 100vw;
+    min-height: 40vh;
+    background-image: url("../../assets/photo/guillermo-ferla-Oze6U2m1oYU-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+
+    button{
+align-self: flex-end;
+    }
+    h1{
+        color: white;
+    }
+
+}
