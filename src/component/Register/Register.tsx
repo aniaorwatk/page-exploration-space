@@ -3,7 +3,12 @@ import "./Register.scss"
 
 const Register =()=>{
     return(
-        <div></div>
+        <div className="register">
+<div className="register__box">
+
+</div>
+
+        </div>
     )
 }
 
