@@ -2,7 +2,7 @@ import React from "react"
 
 const labels={
 header:{
-    buttonLabel: 'Join',
+    buttonLabelLink: 'Join',
     title: 'Join the exploration space',
 },
 

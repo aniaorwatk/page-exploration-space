@@ -1,11 +1,16 @@
 import React from "react";
-import Header from "./component/Header/Header";
+import {Route, Routes} from 'react-router-dom';
+import Main from "./component/Main";
+import Register from "./component/Register/Register";
 
-function App() {
+const App =() =>{
   return (
-    <div className="App">
-      <Header />
-    </div>
+  
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+ 
   );
 }
 
