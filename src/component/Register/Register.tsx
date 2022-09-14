@@ -144,6 +144,7 @@ const Register = () => {
             buttonLabel={labels.register.buttonLabel}
           />
         </form>
+        <p>{labels.register.logOn}</p>
       </div>
     </div>
   );

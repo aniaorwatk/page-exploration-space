@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom";
 
 export const maxCharacters: number = 255;
 export const maxCharactersTextatea: number = 1400;
@@ -11,15 +12,15 @@ header:{
     title: 'Join the exploration space',
 },
 register:{
-    title: 'Rejestracja',
-    emailLabel: 'E-mail',
+    title: 'Register',
+    emailLabel: 'E-mail:',
     emailPlaceholder: 'Email',
-    loginLabel: 'Your Nick',
+    loginLabel: 'Your Nick:',
     loginPlaceholder: 'Your Nick in app',
-    placeholderPassword: "Hasło",
-    placeholderRepeatPassword: "Powtórz hasło",
-    labelPassword: "Podaj hasło:",
-    labelRepeatPassword: "Powtórz hasło:",
+    placeholderPassword: "Password",
+    placeholderRepeatPassword: "Repeat Password",
+    labelPassword: "Your password:",
+    labelRepeatPassword: "Repeat your password:",
     buttonLabel: 'Join us',
     warningRequired: "To pole jest Wymagane",
     warningRequiredAgreement: "Zgoda jest wymagana",
@@ -30,6 +31,7 @@ register:{
     warningDifferentName: `Hasło nie może być takie samo Nick`,
     warningMatchPassword: `Hasła muszą się zgadzać`,
     altImg: "Podglądnij hasło",
+    logOn:<>If you have an account, please<Link to="/"> log in</Link>.</>
 }
 
 }

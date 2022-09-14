@@ -2,31 +2,31 @@
 
 input,
 textarea {
-  width: 20rem;
-  line-height: 2rem;
+  width: 16rem;
+  line-height: 1.75rem;
   padding-left: 0.5rem;
-  font-size: $font-size-M;
+  font-size: $font-size-S;
   background: $color-bg-white;
   border-radius: 0.3rem;
-  border: 1px solid black;
+  border: 1px solid$color-sea;
 }
 input:focus {
-  outline-color: red;
+  outline-color: $color-sea;
 }
 
 .InputError {
-  margin: 0;
+  margin: 0.5rem;
   padding: 0;
   font-size: $font-size-S;
-  color: red;
+  color:$color-error;
 }
 
 .errorInput {
-  border: 1px solid red;
+  border: 1px solid $color-error;
 }
 
 .errorInput:focus {
-  outline-color: red;
+  outline-color: $color-error;
 }
 
 .InputBox,
@@ -35,23 +35,26 @@ input:focus {
   flex-direction: column;
   &__box {
     display: flex;
-    width: 35rem;
-    justify-content: space-between;
-    margin-top: 1rem;
+    flex-direction:column;
+    // width: 20rem;
+    // justify-content: space-between;
+    // margin-top: 1rem;
     &-filed {
       position: relative;
       &--img {
         position: absolute;
         top: 0.5rem;
-        left: 18rem;
+        left: 14rem;
       }
     }
   }
 }
 
 label {
-  font-size: $font-size-M;
+  display: block;
+  font-size: $font-size-S;
   line-height: 2rem;
+  color: $color-text-white;
 }
 
 .InputBox__box-filed--img {
@@ -70,7 +73,7 @@ label {
     margin: 1rem 0 0 1rem;
     width: 35rem;
     &-input {
-      border: 1px solid black;
+      border: 1px solid $color-sea;
       width: 1.25rem;
       height: 1.25rem;
       border-radius: 0.3125rem;
@@ -86,7 +89,7 @@ label {
       width: 100%;
     }
     .errorCheckbox {
-      border: 1px solid red;
+      border: 1px solid $color-error;
     }
   }
 }
