@@ -2,8 +2,9 @@ import React, { useRef, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import labels, { maxCharacters, minCharacters, minCharactersPassword } from "../../labels";
 import ButtonPrimary from "../Buttons/ButtonPrimary";
+import Input from "../Input/Input";
 import "./Register.scss";
-import { eyeOffPassword, eyeOnPassword } from "./RegisterHandler";
+import { eyeOffPassword, eyeOnPassword, formInputsType, InputType, nameInputs } from "./RegisterHandler";
 
 export  interface IRegisterFormType{
 login: 'string',
@@ -79,7 +80,17 @@ const Register = () => {
       <div className="register__box">
         <h1>{labels.register.title}</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
-
+<Input 
+            errors={getErrorLogin({ login: errors.login })}
+            labelType={formInputsType.typeLogin}
+            label={labels.register.loginLabel}
+            placeholder={labels.register.loginPlaceholder}
+            inputType={InputType.textType}
+            inputRequired={inputLogin}
+            nameInput={nameInputs.nameLogin}/>
+<Input />
+<Input />
+<Input />
 
 <ButtonPrimary
 type={buttonType}
@@ -93,3 +104,7 @@ buttonLabel={labels.register.buttonLabel}
 };
 
 export default Register;
+function getErrorLogin(arg0: { login: import("react-hook-form").FieldError | undefined; }): string | false | JSX.Element | undefined {
+    throw new Error("Function not implemented.");
+}
+

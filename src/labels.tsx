@@ -14,7 +14,17 @@ register:{
     title: 'Rejestracja',
     emailLabel: 'E-mail',
     emailPlaceholder: 'Email',
+    loginLabel: 'Your Nick',
+    loginPlaceholder: 'Your Nick in app',
     buttonLabel: 'Join us',
+    warningRequired: "To pole jest Wymagane",
+    warningRequiredAgreement: "Zgoda jest wymagana",
+    warningMaxCharacters: `To pole może mieć maksymalnie ${maxCharacters}`,
+    warningMaxCharactersTextarea: `To pole może mieć maksymalnie ${maxCharactersTextatea}`,
+    warningMinCharacters: `To pole może mieć minimalnie ${minCharacters}`,
+    warningMinCharactersPassword: `To pole może mieć minimalnie ${minCharactersPassword}`,
+    warningDifferentName: `Hasło nie może być takie samo Nick`,
+    warningMatchPassword: `Hasła muszą się zgadzać`,
 }
 
 }
