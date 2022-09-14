@@ -7,12 +7,11 @@ const Header = ()=>{
 
     const buttonType = 'button';
     const buttonClass= 'primary';
-    const buttonLinkName = '=/register';
+    const buttonLinkName = 'register';
     return(
         <header>
             <h1>{labels.header.title}</h1>
             <ButtonPrimary
-                // buttonLabel={labels.header.buttonLabel}
                 customClassName={buttonClass}
                 type={buttonType}
                 linkLabel={labels.header.buttonLabelLink}
