@@ -1,7 +1,7 @@
 import React from "react";
 import { LiteralUnion, MultipleFieldErrors, Ref } from "react-hook-form";
-import eyeOn from "../../assets/eye-regular.svg";
-import eyeOff from "../../assets/eye-slash-regular.svg";
+import eyeOn from "../../assets/photo/eye-regular.svg";
+import eyeOff from "../../assets/photo/eye-slash-regular.svg";
 import labels from "../../labels";
 
 
@@ -89,7 +89,7 @@ export const InputType = {
     | "value";
 
 
-    export const getErrorFirstName = ({
+    export const getErrorLogin = ({
         login,
       }: {
         login?: IErrorContentType;
@@ -100,5 +100,44 @@ export const InputType = {
             labels.register.warningMaxCharacters) ||
           (login?.type === IErrorType.minLength &&
             labels.register.warningMinCharacters)
+        );
+      };
+
+      export const getErrorsEmail = ({ email }: { email?: IErrorContentType }) => {
+        return (
+          (email?.type === IErrorType.required && labels.register.warningRequired) ||
+          (email?.type === IErrorType.maxLength && labels.register.warningMaxCharacters)
+        );
+      };  
+
+      export const getErrorsPassword = ({
+        password,
+      }: {
+        password?: IErrorContentType;
+      }) => {
+        return (
+          (password?.type === IErrorType.required && labels.register.warningRequired) ||
+          (password?.type === IErrorType.maxLength &&
+            labels.register.warningMaxCharacters) ||
+          (password?.type === IErrorType.minLength &&
+            labels.register.warningMinCharactersPassword) ||
+          (password?.type === IErrorType.validate && labels.register.warningDifferentName)
+        );
+      };
+      
+      export const getErrorsRepeatPassword = ({
+        repeatPassword,
+      }: {
+        repeatPassword?: IErrorContentType;
+      }) => {
+        return (
+          (repeatPassword?.type === IErrorType.required &&
+            labels.register.warningRequired) ||
+          (repeatPassword?.type === IErrorType.maxLength &&
+            labels.register.warningMaxCharacters) ||
+          (repeatPassword?.type === IErrorType.minLength &&
+            labels.register.warningMinCharactersPassword) ||
+          (repeatPassword?.type === IErrorType.validate &&
+            labels.register.warningMatchPassword)
         );
       };

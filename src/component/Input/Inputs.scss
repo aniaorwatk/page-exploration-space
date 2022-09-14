@@ -11,22 +11,22 @@ textarea {
   border: 1px solid black;
 }
 input:focus {
-  outline-color: $color-light-purple;
+  outline-color: red;
 }
 
 .InputError {
   margin: 0;
   padding: 0;
   font-size: $font-size-S;
-  color: $color-dark-sand;
+  color: red;
 }
 
 .errorInput {
-  border: 1px solid $color-dark-sand;
+  border: 1px solid red;
 }
 
 .errorInput:focus {
-  outline-color: $color-dark-sand;
+  outline-color: red;
 }
 
 .InputBox,
@@ -86,7 +86,7 @@ label {
       width: 100%;
     }
     .errorCheckbox {
-      border: 1px solid $color-dark-sand;
+      border: 1px solid red;
     }
   }
 }

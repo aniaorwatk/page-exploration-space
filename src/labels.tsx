@@ -16,6 +16,10 @@ register:{
     emailPlaceholder: 'Email',
     loginLabel: 'Your Nick',
     loginPlaceholder: 'Your Nick in app',
+    placeholderPassword: "Hasło",
+    placeholderRepeatPassword: "Powtórz hasło",
+    labelPassword: "Podaj hasło:",
+    labelRepeatPassword: "Powtórz hasło:",
     buttonLabel: 'Join us',
     warningRequired: "To pole jest Wymagane",
     warningRequiredAgreement: "Zgoda jest wymagana",
@@ -25,6 +29,7 @@ register:{
     warningMinCharactersPassword: `To pole może mieć minimalnie ${minCharactersPassword}`,
     warningDifferentName: `Hasło nie może być takie samo Nick`,
     warningMatchPassword: `Hasła muszą się zgadzać`,
+    altImg: "Podglądnij hasło",
 }
 
 }
