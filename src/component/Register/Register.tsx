@@ -9,6 +9,8 @@ import ButtonPrimary from "../Buttons/ButtonPrimary";
 import Input from "../Input/Input";
 import "./Register.scss";
 import {
+  buttonClass,
+  buttonType,
   eyeOffPassword,
   eyeOnPassword,
   formInputsType,
@@ -28,12 +30,10 @@ export interface IRegisterFormType {
 }
 
 const Register = () => {
-  const buttonType = "submit";
-  const buttonClass = "primary";
 
   const {
     register,
-    formState: { errors, isValid, isSubmitted },
+    formState: { errors, isValid, isSubmitted},
     handleSubmit,
     watch,
   } = useForm<IRegisterFormType>({});
@@ -137,7 +137,6 @@ const Register = () => {
             handleClick={togglePasswordRepeat}
             nameInput={nameInputs.nameRepeatPassword}
           />
-
           <ButtonPrimary
             type={buttonType}
             customClassName={buttonClass}
@@ -151,6 +150,3 @@ const Register = () => {
 };
 
 export default Register;
-
-
-
