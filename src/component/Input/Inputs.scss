@@ -9,6 +9,7 @@ textarea {
   background: $color-bg-white;
   border-radius: 0.3rem;
   border: 1px solid$color-sea;
+  font-family: $font-orbitron;
 }
 input:focus {
   outline-color: $color-sea;
@@ -101,24 +102,31 @@ label {
 @media only screen and (min-width: $breakpointL) {
   input,
   textarea {
+    width: 20rem;
     margin: 0 1rem 1rem 1rem;
     line-height: 2rem;
     font-size: $font-size-M;
   }
   .InputBox {
+    flex-direction:column-reverse;
     &__box {
-      flex-direction: row;
+      flex-direction:row;
       justify-content: space-between;
       &-filed {
         &--img {
           top: 0.5rem;
-          left: 15rem;
+          left: 19rem;
         }
       }
     }
   }
   label {
     font-size: $font-size-M;
+  }
+
+  .InputError {
+
+
   }
 }
 
