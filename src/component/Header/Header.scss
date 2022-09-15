@@ -7,7 +7,7 @@ header{
     padding: 1rem;
     min-width: 100vw;
     min-height: 40vh;
-    background-image: url("../../assets/photo/guillermo-ferla-Oze6U2m1oYU-unsplash.jpg");
+    background-image: url("../../assets/video/video [MConverter.eu].webp");
     background-size: cover;
     background-position: center;
     font-family: $font-orbitron;
@@ -17,6 +17,10 @@ align-self: flex-end;
     }
     h1{
         color: white;
+    }
+
+    .header__span{
+        color: $color-sea;
     }
 
 }

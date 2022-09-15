@@ -9,7 +9,7 @@ export const minCharactersPassword: number = 6;
 const labels={
 header:{
     buttonLabelLink: 'Join',
-    title: 'Join the exploration space',
+    title: <>Join the <span className="header__span"> exploration </span> space</>,
 },
 register:{
     title: 'Register',

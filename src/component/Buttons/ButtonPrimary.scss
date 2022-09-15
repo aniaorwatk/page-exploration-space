@@ -9,6 +9,10 @@ background: $color-buttonPrimary;
    border:1px solid  white;
    border-radius: 0.5rem;
    cursor: pointer;
+   a{
+    text-decoration: none;
+    color: $color-text-white;
+   }
 }
 
 .primary:hover{
