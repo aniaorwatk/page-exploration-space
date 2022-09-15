@@ -18,7 +18,7 @@ input:focus {
   margin: 0.5rem;
   padding: 0;
   font-size: $font-size-S;
-  color:$color-error;
+  color: $color-error;
 }
 
 .errorInput {
@@ -35,10 +35,7 @@ input:focus {
   flex-direction: column;
   &__box {
     display: flex;
-    flex-direction:column;
-    // width: 20rem;
-    // justify-content: space-between;
-    // margin-top: 1rem;
+    flex-direction: column;
     &-filed {
       position: relative;
       &--img {
@@ -99,4 +96,39 @@ label {
   height: 4rem;
   width: 20rem;
   resize: none;
+}
+
+@media only screen and (min-width: $breakpointL) {
+  input,
+  textarea {
+    margin: 0 1rem 1rem 1rem;
+    line-height: 2rem;
+    font-size: $font-size-M;
+  }
+  .InputBox {
+    &__box {
+      flex-direction: row;
+      justify-content: space-between;
+      &-filed {
+        &--img {
+          top: 0.5rem;
+          left: 15rem;
+        }
+      }
+    }
+  }
+  label {
+    font-size: $font-size-M;
+  }
+}
+
+@media only screen and (min-width: $breakpointXL) {
+  input,
+  textarea {
+    line-height: 2.5rem;
+    font-size: $font-size-L;
+  }
+  label {
+    font-size: $font-size-L;
+  }
 }

@@ -3,13 +3,18 @@
 .register {
   display: flex;
   justify-content: center;
-  // align-items: center;
+  align-items:baseline;
   min-height: 100vh;
   width: 100vw;
   background-image: url("../../assets/photo/pexels-alberlan-barros-7311920.jpg");
   background-size: cover;
   &__box {
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+    flex-direction: column;
     h1 {
+      align-self: flex-start;
       margin: 1.5rem 0;
       color: $color-text-white;
     }
@@ -23,6 +28,7 @@
     }
     p {
       color: $color-text-white;
+      font-size:$font-size-S;
     }
     a {
       color: $color-sea;
@@ -30,3 +36,36 @@
     }
   }
 }
+
+@media only screen and (min-width: $breakpointM) {
+  .register{
+    align-items:center;
+    &__box {
+      align-items:center;
+      justify-content: center;
+  }
+}
+}
+
+@media only screen and (min-width: $breakpointL) {
+.register{
+  align-items:center;
+  &__box {
+    align-items:center;
+    justify-content: center;
+  p {
+    color: $color-text-white;
+    font-size:$font-size-M;
+  }
+}
+}
+}
+
+@media only screen and (min-width: $breakpointXL) {
+
+}
+
+@media only screen and (min-width: $breakpointXL) and (min-height: $breakpointM) {
+
+}
+
