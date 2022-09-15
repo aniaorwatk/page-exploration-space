@@ -1,0 +1,134 @@
+@import "../../scss/Main";
+
+input,
+textarea {
+  width: 16rem;
+  line-height: 1.75rem;
+  padding-left: 0.5rem;
+  font-size: $font-size-S;
+  background: $color-bg-white;
+  border-radius: 0.3rem;
+  border: 1px solid$color-sea;
+}
+input:focus {
+  outline-color: $color-sea;
+}
+
+.InputError {
+  margin: 0.5rem;
+  padding: 0;
+  font-size: $font-size-S;
+  color: $color-error;
+}
+
+.errorInput {
+  border: 1px solid $color-error;
+}
+
+.errorInput:focus {
+  outline-color: $color-error;
+}
+
+.InputBox,
+.textareaBox {
+  display: flex;
+  flex-direction: column;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    &-filed {
+      position: relative;
+      &--img {
+        position: absolute;
+        top: 0.5rem;
+        left: 14rem;
+      }
+    }
+  }
+}
+
+label {
+  display: block;
+  font-size: $font-size-S;
+  line-height: 2rem;
+  color: $color-text-white;
+}
+
+.InputBox__box-filed--img {
+  height: 1rem;
+  filter: contrast(1%);
+  -webkit-filter: contrast(120%);
+}
+
+.inputCheckbox {
+  display: flex;
+  flex-direction: column;
+  &__box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1rem 0 0 1rem;
+    width: 35rem;
+    &-input {
+      border: 1px solid $color-sea;
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 0.3125rem;
+      margin-top: 0.25rem;
+    }
+    &-input:checked {
+      -webkit-appearance: checkbox;
+    }
+    &-label {
+      margin-left: 2rem;
+      font-size: $font-size-S;
+      line-height: 1.2rem;
+      width: 100%;
+    }
+    .errorCheckbox {
+      border: 1px solid $color-error;
+    }
+  }
+}
+
+.textareaBox__box-text {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 4rem;
+  width: 20rem;
+  resize: none;
+}
+
+@media only screen and (min-width: $breakpointL) {
+  input,
+  textarea {
+    margin: 0 1rem 1rem 1rem;
+    line-height: 2rem;
+    font-size: $font-size-M;
+  }
+  .InputBox {
+    &__box {
+      flex-direction: row;
+      justify-content: space-between;
+      &-filed {
+        &--img {
+          top: 0.5rem;
+          left: 15rem;
+        }
+      }
+    }
+  }
+  label {
+    font-size: $font-size-M;
+  }
+}
+
+@media only screen and (min-width: $breakpointXL) {
+  input,
+  textarea {
+    line-height: 2.5rem;
+    font-size: $font-size-L;
+  }
+  label {
+    font-size: $font-size-L;
+  }
+}
