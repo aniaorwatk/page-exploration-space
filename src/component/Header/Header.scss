@@ -5,7 +5,7 @@ header{
     flex-direction:column;
     justify-content: space-between;
     padding: 1rem;
-    min-width: 100vw;
+    width: 100vw;
     min-height: 40vh;
     background-image: url("../../assets/video/video [MConverter.eu].webp");
     background-size: cover;
@@ -26,10 +26,14 @@ align-self: flex-end;
 }
 
 @media only screen and (min-width: $breakpointL) {
+    header{
+        width: 70vw;
+    }
     
-    // header{
-    // width: 1023px;
-
-    // }
+    h1{
+        font-size: 5rem;
+        color: white;
+    }
+   
 
 }
