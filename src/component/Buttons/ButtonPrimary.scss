@@ -1,6 +1,7 @@
 @import '../../scss/Main';
 
 .primary{
+  font-family: $font-orbitron;
 background: $color-buttonPrimary;
    color: $color-text-white;
    font-size: $font-size-M;
@@ -8,6 +9,10 @@ background: $color-buttonPrimary;
    border:1px solid  white;
    border-radius: 0.5rem;
    cursor: pointer;
+   a{
+    text-decoration: none;
+    color: $color-text-white;
+   }
 }
 
 .primary:hover{

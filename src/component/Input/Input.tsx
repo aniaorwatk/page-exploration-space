@@ -30,6 +30,8 @@ const Input = ({
   nameInput,
   autocomplete,
 }: IInputType) => {
+
+
   return (
     <div className="InputBox">
       <div className="InputBox__box">

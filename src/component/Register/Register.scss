@@ -8,10 +8,11 @@
   width: 100vw;
   background-image: url("../../assets/photo/pexels-alberlan-barros-7311920.jpg");
   background-size: cover;
+  font-family: $font-orbitron;
   &__box {
     display: flex;
     justify-content: center;
-    align-items:baseline;
+    // align-items:stretch;
     flex-direction: column;
     h1 {
       align-self: flex-start;
@@ -21,6 +22,7 @@
     form {
       display: flex;
       flex-direction: column;
+      // align-items: center;
       button {
         align-self: center;
         margin: 1.5rem;
