@@ -26,6 +26,16 @@ align-self: flex-end;
 }
 
 @media only screen and (min-width: $breakpointL) {
+
+    h1{
+        font-size: 5rem;
+        color: white;
+    }
+   
+
+}
+
+@media only screen and (min-width: $breakpointXL) {
     header{
         width: 70vw;
     }
