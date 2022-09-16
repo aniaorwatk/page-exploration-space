@@ -109,7 +109,7 @@ label {
   }
   .InputBox {
     flex-direction:column-reverse;
-    &__box {
+    .InputBox__box {
       flex-direction:row;
       justify-content: space-between;
       &-filed {
