@@ -4,8 +4,8 @@ import "./Settings.scss";
 
 const Settings = () => {
   return (
-    <div className="settings">
-      <div className="settings__box">
+    <div className="settingsBox">
+      <div className="settingsBox__box">
         <Navigation />
       </div>
     </div>

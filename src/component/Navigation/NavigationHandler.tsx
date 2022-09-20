@@ -1,10 +1,9 @@
 import React from "react";
+import circleXmark from "../../assets/photo/circle-xmark-regular.svg"
+import barsSolid from "../../assets/photo/bars-solid.svg"
 
-// export interface IPropsLink {
-//     id: number;
-//     url: string;
-//     text: string;
-// }
+export const closeMenuImg = circleXmark;
+export const bars = barsSolid;
 
 export const links = [
     {
@@ -33,4 +32,3 @@ export const links = [
         text: 'Album',
     },
 ];
-

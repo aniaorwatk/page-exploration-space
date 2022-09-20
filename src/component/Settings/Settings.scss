@@ -1,11 +1,34 @@
 @import "../../scss/Main";
 
-.settings{
+.settingsBox {
+  border-top: 2px solid $color-sea;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background-color: $color-bg-white;
+  &__box {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     width: 100vw;
-    &__box{
-        width: 100vw;
-    }
+  }
+}
 
+@media only screen and (min-width: $breakpointM) {
+  .settingsBox {
+    width: 100vw;
+    background-color: transparent;
+    &__box {
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpointXL) {
+  .settingsBox {
+    width: 100vw;
+    &__box {
+      width: 70vw;
+      justify-content: flex-end;
+    }
+  }
 }
