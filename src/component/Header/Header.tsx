@@ -11,12 +11,6 @@ const Header = () => {
     <header className="header">
       <div className="header__box">
       <h1>{labels.header.title}</h1>
-      <ButtonPrimary
-        customClassName={buttonClass}
-        type={buttonType}
-        linkLabel={labels.header.buttonLabelLink}
-        linkName={buttonLinkName}
-      />
       </div>
     </header>
   );

@@ -3,51 +3,44 @@
 .header {
   display: flex;
   justify-content: center;
-width: 100vw;
-  &__box{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
   width: 100vw;
-  min-height: 40vh;
-  background-image: url("../../assets/video/video [MConverter.eu].webp");
-  background-size: cover;
-  background-position: center;
-  font-family: $font-orbitron;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100vw;
+    min-height: 40vh;
+    background-image: url("../../assets/video/video [MConverter.eu].webp");
+    background-size: cover;
+    background-position: center;
+    font-family: $font-orbitron;
 
-  button {
-    align-self: flex-end;
+    h1 {
+      color: $color-text-white;
+    }
+    .header__span {
+      color: $color-sea;
+    }
   }
-  h1 {
-    color: white;
-  }
-  .header__span {
-    color: $color-sea;
-  }
-}
 }
 
 @media only screen and (min-width: $breakpointM) {
   h1 {
-    font-size: 3rem;
+    font-size: $font-size-h1SmallHeader;
   }
 }
 
 @media only screen and (min-width: $breakpointL) {
   h1 {
-    font-size: 5rem;
+    font-size: $font-size-h1BigHeader;
   }
 }
 
 @media only screen and (min-width: $breakpointXL) {
   .header {
-    &__box{
-     width: 70vw; 
+    &__box {
+      width: 70vw;
     }
-  }
-  h1 {
-    font-size: 5rem;
-    color: white;
   }
 }
