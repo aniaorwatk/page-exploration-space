@@ -88,6 +88,8 @@ const Register = () => {
   const onSubmit: SubmitHandler<IRegisterFormType> = (data) =>
     console.log(data);
 
+    const linkToRegisterSuccess ="/register-success";
+
   return (
     <div className="register">
       <div className="register__box">
@@ -141,6 +143,7 @@ const Register = () => {
             type={buttonType}
             customClassName={buttonClass}
             buttonLabel={labels.register.buttonLabel}
+            linkName = {linkToRegisterSuccess}
           />
         </form>
         <p>{labels.register.logOn}</p>

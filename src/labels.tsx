@@ -42,11 +42,15 @@ const labels = {
     ),
   },
 
+  registerSuccess:{
+title:'Thank you for your registration',
+text:'We have sent you all the information on your e-mail',
+  },
+
   login: {
     title: "Login",
     loginLabel: "Your Nick or E-mail:",
     loginPlaceholder: "Nick or E-mail",
-
     buttonLabel: "Log in",
     registerOn: (
       <>
@@ -54,6 +58,8 @@ const labels = {
       </>
     ),
   },
+
+
 };
 
 export default labels;
