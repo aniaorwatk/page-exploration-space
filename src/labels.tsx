@@ -31,8 +31,13 @@ register:{
     warningDifferentName: `Hasło nie może być takie samo Nick`,
     warningMatchPassword: `Hasła muszą się zgadzać`,
     altImg: "Podglądnij hasło",
-    logOn:<>If you have an account, please<Link to="/"> log in</Link>.</>
-}
+    logOn:<>If you have an account, please<Link to="/"> login</Link>.</>,
+},
+
+login:{
+    title: 'Login',
+    registerOn:<>If you not have an account, please<Link to="/"> register in</Link>.</>,
+},
 
 }
 
