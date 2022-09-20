@@ -1,6 +1,10 @@
 @import "../../scss/Main";
 
-header {
+.header {
+  display: flex;
+  justify-content: center;
+width: 100vw;
+  &__box{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -22,6 +26,7 @@ header {
     color: $color-sea;
   }
 }
+}
 
 @media only screen and (min-width: $breakpointM) {
   h1 {
@@ -36,8 +41,10 @@ header {
 }
 
 @media only screen and (min-width: $breakpointXL) {
-  header {
-    width: 70vw;
+  .header {
+    &__box{
+     width: 70vw; 
+    }
   }
   h1 {
     font-size: 5rem;
