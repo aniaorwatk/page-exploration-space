@@ -11,7 +11,7 @@ const labels = {
     buttonLabelLink: "Join",
     title: (
       <>
-        Join the space<span className="header__span"> exploration</span>{" "}
+        Join the space<span className="header__span"> exploration</span>
       </>
     ),
   },
