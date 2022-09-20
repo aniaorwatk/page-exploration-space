@@ -1,0 +1,11 @@
+@import "../../scss/Main";
+
+.settings{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    &__box{
+        width: 100vw;
+    }
+
+}

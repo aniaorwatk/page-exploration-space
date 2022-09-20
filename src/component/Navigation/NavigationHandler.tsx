@@ -1,31 +1,36 @@
 import React from "react";
 
-export interface IPropsLink {
-    id: number;
-    url: string;
-    text: string;
-}
+// export interface IPropsLink {
+//     id: number;
+//     url: string;
+//     text: string;
+// }
 
 export const links = [
     {
         id: 1,
-        url: '/',
-        text: 'Dźwięk',
+        url: '/register',
+        text: 'Join',
     },
     {
         id: 2,
         url: '/',
-        text: 'Ranking',
+        text: 'Login',
     },
     {
         id: 3,
-        url: '/error-report',
-        text: 'Profil',
+        url: '/',
+        text: 'Information',
     },
     {
         id: 4,
         url: '/',
-        text: 'Informacje',
+        text: 'Game',
+    },
+    {
+        id: 5,
+        url: '/',
+        text: 'Album',
     },
 ];
 

@@ -1,10 +1,172 @@
 @import "../../scss/Main";
 
-.navigation{
-    border-top: 2px solid $color-sea;
-    width: 100vw;
-&__box{
-    height: 5rem;
-
-}
-}
+.blur {
+    position: relative;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      left: 100%;
+      transform: translate(-100%, 0);
+      height: 100vh;
+      width: 100vw;
+    //   background: $color-bg-blur;
+      overflow: hidden;
+    }
+  }
+  
+  .settings__block {
+    // background: $color-darkOrange;
+    border: $borderSize white;
+    border-radius: 0.5rem;
+    height: 0;
+    width: 12.7rem;
+    overflow: hidden;
+    transition: 0.3s;
+    position: absolute;
+    right: 0;
+    z-index: 6;
+  }
+  
+  .settings__navigation {
+    display: flex;
+    flex-direction: row-reverse;
+    color: white;
+    // font-family: $font-base-medium;
+    font-size: $font-size-M;
+  
+    &-list {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 0.25rem 1rem 1rem 1rem;
+  
+      li a {
+        display: block;
+        padding: 0.75rem 0 0 0;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+  
+        &:hover {
+          color: black;
+          transition: 0.3s;
+        }
+      }
+    }
+    // .settings__navigation-logout {
+    //   cursor: pointer;
+    //   padding: 0.75rem 0 0 0;
+    //   &:hover {
+    //     color: $color-golden;
+    //     transition: 0.3s;
+    //   }
+    // }
+  
+    &-closeMenuBtn {
+      display: flex;
+      align-items: flex-start;
+      padding: 1rem 1rem 0 0;
+      background: transparent;
+      border: none;
+  
+      img {
+        width: 3rem;
+        cursor: pointer;
+        border-radius: 50%;
+  
+        &:hover {
+          background: rgba(white, 0.2);
+        }
+      }
+    }
+  
+    &-logoWrapper {
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-width: $breakpointL) {
+    .blur {
+      position: static;
+  
+      &::after {
+        position: static;
+        z-index: 0;
+        height: 0;
+        width: 0;
+        background: transparent;
+      }
+    }
+  
+    .settings__block {
+      display: block;
+    //   background: $color-text-primary;
+      border: none;
+      border-radius: 0;
+      height: auto !important;
+      width: auto;
+      position: static;
+      visibility: visible !important;
+      transition: 0s;
+    }
+  
+    .settings__navigation {
+      flex-direction: row;
+      justify-content: flex-end;
+  
+      &-list {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0.6rem 0.75rem;
+  
+        li a {
+          padding: 0 0.75rem;
+        }
+      }
+  
+      .settings__navigation-logout {
+        padding: 0 0.75rem;
+      }
+  
+      &-closeMenuBtn {
+        display: none;
+      }
+    }
+  }
+  
+  @media only screen and (min-width: $breakpointXL) {
+    .settings__block {
+      height: 6.25rem;
+    }
+  
+    .settings__navigation {
+      align-items: center;
+      justify-content: space-between;
+  
+      &-list {
+        height: 100%;
+        padding-right: 0;
+  
+        li a {
+          padding: 0 0.75rem;
+        }
+  
+        li:last-child a {
+          padding: 0 0 0 0.75rem;
+        }
+      }
+  
+      &-logoWrapper {
+        display: inline-block;
+        padding: 1rem 1.25rem;
+        // background: $color-logo;
+        // border: $borderSize $color-darkerPinkish;
+        border-radius: 0.5rem;
+      }
+    }
+  }
