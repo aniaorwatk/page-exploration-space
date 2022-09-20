@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import { Link } from "react-router-dom";
 
 export const maxCharacters: number = 255;
@@ -6,22 +6,26 @@ export const maxCharactersTextatea: number = 1400;
 export const minCharacters: number = 2;
 export const minCharactersPassword: number = 6;
 
-const labels={
-header:{
-    buttonLabelLink: 'Join',
-    title: <>Join the space<span className="header__span"> exploration</span>  </>,
-},
-register:{
-    title: 'Register',
-    emailLabel: 'E-mail:',
-    emailPlaceholder: 'Email',
-    loginLabel: 'Your Nick:',
-    loginPlaceholder: 'Your Nick in app',
+const labels = {
+  header: {
+    buttonLabelLink: "Join",
+    title: (
+      <>
+        Join the space<span className="header__span"> exploration</span>{" "}
+      </>
+    ),
+  },
+  register: {
+    title: "Register",
+    emailLabel: "E-mail:",
+    emailPlaceholder: "Email",
+    loginLabel: "Your Nick:",
+    loginPlaceholder: "Your Nick in app",
     placeholderPassword: "Password",
     placeholderRepeatPassword: "Repeat Password",
     labelPassword: "Your password:",
     labelRepeatPassword: "Repeat your password:",
-    buttonLabel: 'Join us',
+    buttonLabel: "Join us",
     warningRequired: "To pole jest Wymagane",
     warningRequiredAgreement: "Zgoda jest wymagana",
     warningMaxCharacters: `To pole może mieć maksymalnie ${maxCharacters}`,
@@ -31,9 +35,25 @@ register:{
     warningDifferentName: `Hasło nie może być takie samo Nick`,
     warningMatchPassword: `Hasła muszą się zgadzać`,
     altImg: "Podglądnij hasło",
-    logOn:<>If you have an account, please<Link to="/"> log in</Link>.</>
-}
+    logOn: (
+      <>
+        If you have an account, please<Link to="/login"> log in</Link>.
+      </>
+    ),
+  },
 
-}
+  login: {
+    title: "Login",
+    loginLabel: "Your Nick or E-mail:",
+    loginPlaceholder: "Nick or E-mail",
 
-export default labels
+    buttonLabel: "Log in",
+    registerOn: (
+      <>
+        If you not have an account, please<Link to="/register"> register in</Link>.
+      </>
+    ),
+  },
+};
+
+export default labels;
