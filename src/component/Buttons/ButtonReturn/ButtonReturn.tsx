@@ -6,7 +6,7 @@ const ButtonReturn = () => {
   const labelLink = "Return";
   return (
     <button type="button" className="btnReturn">
-      <Link to="/">{labelLink}</Link>
+      <Link to="/"> <span className="btnReturn__link">{labelLink}</span></Link >
     </button>
   );
 };

@@ -6,6 +6,7 @@ import labels, {
   minCharactersPassword,
 } from "../../labels";
 import ButtonPrimary from "../Buttons/ButtonPrimary";
+import ButtonReturn from "../Buttons/ButtonReturn/ButtonReturn";
 import Input from "../Input/Input";
 import "./Register.scss";
 import {
@@ -93,6 +94,7 @@ const Register = () => {
   return (
     <div className="register">
       <div className="register__box">
+        <ButtonReturn />
         <h1>{labels.register.title}</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Input

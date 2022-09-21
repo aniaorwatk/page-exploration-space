@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import labels from "../../labels";
 import ButtonPrimary from "../Buttons/ButtonPrimary";
+import ButtonReturn from "../Buttons/ButtonReturn/ButtonReturn";
 import Input from "../Input/Input";
 import {
   buttonClass,
@@ -48,6 +49,7 @@ const Login = () => {
   return (
     <div className="login">
       <div className="login__box">
+        <ButtonReturn/>
         <h1>{labels.login.title}</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Input
