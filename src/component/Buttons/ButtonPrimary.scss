@@ -6,7 +6,7 @@ background: $color-buttonPrimary;
    color: $color-text-white;
    font-size: $font-size-M;
    padding: 0.5rem;
-   border:1px solid  white;
+   border:1px solid  $color-text-white;
    border-radius: 0.5rem;
    cursor: pointer;
    a{
@@ -24,5 +24,5 @@ button:disabled,
 button[disabled]:hover,
 button:disabled:hover {
   background:$color-buttonDisabled;
-  border: 1px solid white;
+  border: 1px solid $color-text-white;
 }

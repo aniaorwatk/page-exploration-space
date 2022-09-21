@@ -1,0 +1,21 @@
+@import "../../../scss/Main";
+
+
+.btnReturn{
+    background: $color-buttonReturn;
+    border:1px solid $color-text-white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: $color-text-white;
+    &__link{
+        padding: 1rem;
+        text-decoration: none;
+        font-size: $font-size-L;
+        color: $color-text-white;
+        font-family: $font-orbitron;
+    }
+
+    &:hover{
+        background: $color-khaki; 
+    }
+}

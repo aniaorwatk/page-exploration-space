@@ -1,0 +1,31 @@
+@import "../../../scss/Main";
+
+.registerSuccess {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &-title {
+      margin-bottom: 3rem;
+      font-weight: 800; 
+      font-size: $font-size-XXL; 
+      color: $color-text-white;
+    }
+
+    &-text{
+        font-size: $font-size-L; 
+        color: $color-khaki;
+    }
+
+    button{
+        margin-top: 6rem;
+        align-self: center;
+    }
+  }
+}
