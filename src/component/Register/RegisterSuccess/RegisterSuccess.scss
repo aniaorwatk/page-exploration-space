@@ -9,13 +9,23 @@
   &__box {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 
     &-title {
-      align-self: center;
-      color: $color-bg-white;
       margin-bottom: 3rem;
+      font-weight: 800; 
+      font-size: $font-size-XXL; 
+      color: $color-text-white;
+    }
+
+    &-text{
+        font-size: $font-size-L; 
+        color: $color-khaki;
+    }
+
+    button{
+        margin-top: 6rem;
+        align-self: center;
     }
   }
 }
