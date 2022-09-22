@@ -61,7 +61,6 @@ const Login = () => {
             inputRequired={inputLogin}
             nameInput={nameInputs.nameLogin}
           />
-
           <Input
             errors={getErrorsPassword({ password: errors.password })}
             labelType={formInputsType.typePassword}
@@ -74,7 +73,6 @@ const Login = () => {
             handleClick={togglePassword}
             nameInput={nameInputs.namePassword}
           />
-
           <ButtonPrimary
             type={buttonType}
             customClassName={buttonClass}
