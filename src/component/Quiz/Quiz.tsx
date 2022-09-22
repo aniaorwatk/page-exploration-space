@@ -5,7 +5,6 @@ import './Quiz.scss'
 const Quiz =()=>{
     return(
         <div className="quiz">
-<Settings />
 <div className="quiz__box">
 
 
