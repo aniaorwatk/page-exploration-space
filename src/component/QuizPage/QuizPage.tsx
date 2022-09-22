@@ -1,16 +1,17 @@
 import React from "react";
 import Quiz from "../../features/quiz/quiz";
-import './QuizPage.scss'
+import ButtonReturn from "../Buttons/ButtonReturn/ButtonReturn";
+import "./QuizPage.scss";
 
-const QuizPage =()=>{
-    return(
-        <div className="quiz">
-<div className="quiz__box">
-<Quiz />
+const QuizPage = () => {
+  return (
+    <div className="quiz">
+      <div className="quiz__box">
+        <ButtonReturn />
+        <Quiz />
+      </div>
+    </div>
+  );
+};
 
-</div>
-        </div>
-    )
-}
-
-export default QuizPage
+export default QuizPage;
