@@ -1,16 +1,16 @@
 import React from "react";
-import Settings from "../Settings/Settings";
-import './Quiz.scss'
+import Quiz from "../../features/quiz/quiz";
+import './QuizPage.scss'
 
-const Quiz =()=>{
+const QuizPage =()=>{
     return(
         <div className="quiz">
 <div className="quiz__box">
-
+<Quiz />
 
 </div>
         </div>
     )
 }
 
-export default Quiz
+export default QuizPage

@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
-import userReducer from './tokenUser/userSlice'
+import quizReducer from './quiz/quizSlice'
 
 const store = configureStore({
     reducer: {
-        user: userReducer,
+        quiz: quizReducer,
     }
 })
 export type RootState = ReturnType<typeof store.getState>
