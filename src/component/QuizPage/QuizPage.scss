@@ -3,4 +3,8 @@
 .quiz{
     display: flex;
     flex-direction: column;
+    &__box{
+        display: flex;
+        flex-direction: column;
+    }
 }
