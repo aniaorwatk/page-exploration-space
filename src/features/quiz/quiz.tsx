@@ -6,11 +6,17 @@ import ButtonPrimary from "../../component/Buttons/ButtonPrimary";
 const Quiz = () => {
   const questions = useSelector(selectQuestions);
   const activeQuestion = useSelector(selectAciveQuestion);
-  const dispatch =useDispatch();
+  const dispatch = useDispatch();
+  // const actPlusOne = activeQuestion +1 
 
-  const handleNext = ()=>{
-if(questions[])
-  }
+  const handleNext = () => {
+    if (questions[activeQuestion +1]) {
+      dispatch(next());
+    } else {
+
+    }
+  };
+
 
   // const questionElement = questions.map(
   //   (quest: {
@@ -34,8 +40,15 @@ if(questions[])
     <div>
       {/* {questionElement} */}
       {/* {questions} */}
-{questions[activeQuestion].content}
-      <ButtonPrimary customClassName={"buttonPrimary"} type={"button"} buttonLabel={"Next"} onClick={()=> dispatch(next())}/>
+      <p>{activeQuestion +1} / {questions.length}</p>
+      {questions[activeQuestion].content}
+      {/* {questions.content} */}
+      <ButtonPrimary
+        customClassName={"buttonPrimary"}
+        type={"button"}
+        buttonLabel={"Next"}
+        onClick={handleNext}
+      />
     </div>
   );
 };
