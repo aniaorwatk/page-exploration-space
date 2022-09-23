@@ -2,8 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export interface IQuizStateType {
   activeQuestion: number;
-  question: { content: string ; answers: {content:  string  }[]}[];
-
+  question: { content: string; answers: { id: number; content: string }[] }[];
 }
 
 const initialState: IQuizStateType = {
@@ -12,26 +11,29 @@ const initialState: IQuizStateType = {
     {
       content: "Who was the first person in space?",
       answers: [
-        { content: "Neil Armstrong" },
-        { content: "Yuri Gagarin xxx" },
-        { content: "Helen Sharman" },
+        { id: 1, content: "Neil Armstrong" },
+        { id: 2, content: "Yuri Gagarin xxx" },
+        { id: 3, content: "Helen Sharman" },
       ],
     },
-    { content: "On which planet could you jump the highest?",
-    answers: [
-        { content: "Jupiter" },
-        { content: "Mercury xxxxx" },
-        { content: "Mars" },
-      ],},
-    { content: "How many people have spent more than 700 days in space?",
-    answers: [
-        { content: "3" },
-        { content: "5" },
-        { content: "6 xx" },
-      ],}, 
+    {
+      content: "On which planet could you jump the highest?",
+      answers: [
+        { id: 1, content: "Jupiter" },
+        { id: 2, content: "Mercury xxxxx" },
+        { id: 3, content: "Mars" },
+      ],
+    },
+    {
+      content: "How many people have spent more than 700 days in space?",
+      answers: [
+        { id: 1, content: "3" },
+        { id: 2, content: "5" },
+        { id: 3, content: "6 xx" },
+      ],
+    },
   ],
 };
-
 
 export const quizSlice = createSlice({
   name: "quiz",
@@ -41,7 +43,6 @@ export const quizSlice = createSlice({
     next: (state) => {
       state.activeQuestion += 1;
     },
-
   },
 });
 
@@ -62,4 +63,3 @@ export const selectAciveQuestion = (state: {
 }) => state.quiz.activeQuestion;
 
 export default quizSlice.reducer;
-
