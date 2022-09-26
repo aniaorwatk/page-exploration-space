@@ -48,7 +48,7 @@ export const quizSlice = createSlice({
 
 export const { next } = quizSlice.actions;
 
-export const selectQuestions = (state: { quiz: { question: any } }) =>
+export const selectQuestions = (state: { quiz: { question: any }}) =>
   state.quiz.question;
 
 export const selectActive = (state: { quiz: { question: any } }) =>
