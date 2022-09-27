@@ -1,6 +1,5 @@
 import React from "react";
 import Quiz from "../../features/quiz/quiz";
-
 import ButtonReturn from "../Buttons/ButtonReturn/ButtonReturn";
 import Header from "../Header/Header";
 import "./QuizPage.scss";
