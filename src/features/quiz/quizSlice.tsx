@@ -48,7 +48,6 @@ const initialState: IQuizStateType = {
 export const quizSlice = createSlice({
   name: "quiz",
   initialState,
-
   reducers: {
     next: (state) => {
       state.activeQuestion += 1;
@@ -66,11 +65,13 @@ export const quizSlice = createSlice({
 
 export const { next, toggle, finished } = quizSlice.actions;
 
-export const selectQuestions = (state: { quiz: { questions: { [x: string]: any } } }) =>
-  state.quiz.questions;
+export const selectQuestions = (state: {
+  quiz: { questions: { [x: string]: any } };
+}) => state.quiz.questions;
 
-export const selectActive = (state: { quiz: { questions: { [x: string]: any } } }) =>
-  state.quiz.questions;
+export const selectActive = (state: {
+  quiz: { questions: { [x: string]: any } };
+}) => state.quiz.questions;
 
 export const selectAciveQuestion = (state: {
   quiz: {
@@ -80,6 +81,47 @@ export const selectAciveQuestion = (state: {
   };
 }) => state.quiz.activeQuestion;
 
-export const selectFinished = (state: { quiz: { finished: boolean; }; }) => state.quiz.finished;
+export const selectFinished = (state: { quiz: { finished: boolean } }) =>
+  state.quiz.finished;
+
+export const selectMaxPonits = (state: {
+  [x: string]: any;
+  questions: { [x: string]: any };
+}) => {
+  let maxPoints = 0;
+
+  state.quiz.questions.forEach(
+    (question: {
+      answers: {
+        filter: (arg0: (answer: { points: number }) => boolean) => {
+          (): any;
+          new (): any;
+          length: number;
+        };
+      };
+    }) => {
+      maxPoints += question.answers.filter(
+        (answer: { points: number }) => answer.points > 0
+      ).length;
+    }
+  );
+  return maxPoints
+}
+
+
+  export const selectPoints = (state: { quiz: { questions: any[]; }; }) => {
+    let points = 0;
+  
+    state.quiz.questions.forEach(
+      (question: { answers: { filter: (arg0: (answer: {
+        checked: boolean; points: number; 
+}) => any) => { (): any; new(): any; length: number; }; }; }) => {
+        points += question.answers.filter(
+          (answer) => answer.points > 0 && answer.checked == true).length;
+      }
+    );
+
+  return points;
+};
 
 export default quizSlice.reducer;

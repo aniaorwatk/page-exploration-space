@@ -6,6 +6,7 @@ import {
   toggle,
   finished,
   selectFinished,
+  selectMaxPonits, selectPoints
 } from "./quizSlice";
 import { useSelector, useDispatch } from "react-redux";
 import List from "@mui/material/List";
@@ -22,6 +23,8 @@ const Quiz = () => {
   const questions = useSelector(selectQuestions);
   const finishedQuiz = useSelector(selectFinished);
   const activeQuestion = useSelector(selectAciveQuestion);
+  const maxPoints =useSelector(selectMaxPonits)
+  const points=useSelector(selectPoints)
   const dispatch = useDispatch();
   // const actPlusOne = activeQuestion +1
 
@@ -54,15 +57,15 @@ const Quiz = () => {
 
   // console.log(questions);
 
-  const [checked, setChecked] = React.useState([0]);
-
   const handleToggle = (answerIndex: number) => () => {
     dispatch(toggle(answerIndex));
   };
 
   return (
-    <>
-    <div>
+    
+   <div> 
+    {!finishedQuiz && <>
+    
       <p>
         {activeQuestion + 1} / {questions.length}
       </p>
@@ -140,8 +143,15 @@ const Quiz = () => {
         buttonLabel={"Next"}
         onClick={handleNext}
       />
+    </>}  
+
+
+    {finishedQuiz && 
+    <>
+   Twój wynik to: {points} /{maxPoints} 
+    </>}
     </div>
-    </>
+    
   );
 };
 export default Quiz;
