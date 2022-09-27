@@ -2,34 +2,44 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export interface IQuizStateType {
   activeQuestion: number;
-  question: { content: string; answers: { id: number; content: string }[] }[];
+  finished: boolean;
+  questions: {
+    content: string;
+    answers: {
+      id: number;
+      content: string;
+      checked: boolean;
+      points: number;
+    }[];
+  }[];
 }
 
 const initialState: IQuizStateType = {
   activeQuestion: 0,
-  question: [
+  finished: false,
+  questions: [
     {
       content: "Who was the first person in space?",
       answers: [
-        { id: 1, content: "Neil Armstrong" },
-        { id: 2, content: "Yuri Gagarin xxx" },
-        { id: 3, content: "Helen Sharman" },
+        { id: 1, content: "Neil Armstrong", checked: false, points: 0 },
+        { id: 2, content: "Yuri Gagarin xxx", checked: false, points: 1 },
+        { id: 3, content: "Helen Sharman", checked: false, points: 0 },
       ],
     },
     {
       content: "On which planet could you jump the highest?",
       answers: [
-        { id: 1, content: "Jupiter" },
-        { id: 2, content: "Mercury xxxxx" },
-        { id: 3, content: "Mars" },
+        { id: 1, content: "Jupiter", checked: false, points: 0 },
+        { id: 2, content: "Mercury xxxxx", checked: false, points: 1 },
+        { id: 3, content: "Mars", checked: false, points: 0 },
       ],
     },
     {
       content: "How many people have spent more than 700 days in space?",
       answers: [
-        { id: 1, content: "3" },
-        { id: 2, content: "5" },
-        { id: 3, content: "6 xx" },
+        { id: 1, content: "3", checked: false, points: 0 },
+        { id: 2, content: "5", checked: false, points: 0 },
+        { id: 3, content: "6 xx", checked: false, points: 1 },
       ],
     },
   ],
@@ -43,16 +53,24 @@ export const quizSlice = createSlice({
     next: (state) => {
       state.activeQuestion += 1;
     },
+    toggle: (state, action) => {
+      const question = state.questions[state.activeQuestion];
+      question.answers[action.payload].checked =
+        !question.answers[action.payload].checked;
+    },
+    finished: (state) => {
+      state.finished = true;
+    },
   },
 });
 
-export const { next } = quizSlice.actions;
+export const { next, toggle, finished } = quizSlice.actions;
 
-export const selectQuestions = (state: { quiz: { question: any }}) =>
-  state.quiz.question;
+export const selectQuestions = (state: { quiz: { questions: { [x: string]: any } } }) =>
+  state.quiz.questions;
 
-export const selectActive = (state: { quiz: { question: any } }) =>
-  state.quiz.question;
+export const selectActive = (state: { quiz: { questions: { [x: string]: any } } }) =>
+  state.quiz.questions;
 
 export const selectAciveQuestion = (state: {
   quiz: {
@@ -61,5 +79,7 @@ export const selectAciveQuestion = (state: {
     activeQuestion: number;
   };
 }) => state.quiz.activeQuestion;
+
+export const selectFinished = (state: { quiz: { finished: boolean; }; }) => state.quiz.finished;
 
 export default quizSlice.reducer;
