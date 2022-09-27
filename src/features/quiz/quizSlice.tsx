@@ -105,21 +105,24 @@ export const selectMaxPonits = (state: {
       ).length;
     }
   );
-  return maxPoints
-}
+  return maxPoints;
+};
+export const selectPoints = (state: { quiz: { questions: any[] } }) => {
+  let points = 0;
 
-
-  export const selectPoints = (state: { quiz: { questions: any[]; }; }) => {
-    let points = 0;
-  
-    state.quiz.questions.forEach(
-      (question: { answers: { filter: (arg0: (answer: {
-        checked: boolean; points: number; 
-}) => any) => { (): any; new(): any; length: number; }; }; }) => {
-        points += question.answers.filter(
-          (answer) => answer.points > 0 && answer.checked == true).length;
-      }
-    );
+  state.quiz.questions.forEach(
+    (question: {
+      answers: {
+        filter: (
+          arg0: (answer: { checked: boolean; points: number }) => any
+        ) => { (): any; new (): any; length: number };
+      };
+    }) => {
+      points += question.answers.filter(
+        (answer) => answer.points > 0 && answer.checked
+      ).length;
+    }
+  );
 
   return points;
 };

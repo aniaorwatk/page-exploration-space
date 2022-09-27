@@ -1,4 +1,4 @@
-import React, { Key, ReactNode } from "react";
+import React, { Key, ReactNode, useState } from "react";
 import {
   selectQuestions,
   next,
@@ -61,6 +61,14 @@ const Quiz = () => {
     dispatch(toggle(answerIndex));
   };
 
+  // const restartQuiz = ()=>{
+  //   finishedQuiz = finishedQuiz
+  // }
+
+  function refreshQuiz() {
+    window.location.reload();
+  }
+  
   return (
     
    <div> 
@@ -83,11 +91,11 @@ const Quiz = () => {
           ) => (
             <ListItem
               // key={value}
-              secondaryAction={
-                <IconButton edge="end" aria-label="comments">
-                  {/* <CommentIcon /> */}
-                </IconButton>
-              }
+              // secondaryAction={
+              //   <IconButton edge="end" aria-label="comments">
+                  /* <CommentIcon /> */
+                // </IconButton>
+              // }
               disablePadding
             >
               <ListItemButton onClick={handleToggle(index)} dense>
@@ -138,7 +146,7 @@ const Quiz = () => {
 
       {/* {questions.content} */}
       <ButtonPrimary
-        customClassName={"buttonPrimary"}
+        customClassName={"primary"}
         type={"button"}
         buttonLabel={"Next"}
         onClick={handleNext}
@@ -149,6 +157,13 @@ const Quiz = () => {
     {finishedQuiz && 
     <>
    Twój wynik to: {points} /{maxPoints} 
+
+   <ButtonPrimary
+        customClassName={"primary"}
+        type={"button"}
+        buttonLabel={"Refresf Quiz"}
+        onClick={refreshQuiz}
+      />
     </>}
     </div>
     
