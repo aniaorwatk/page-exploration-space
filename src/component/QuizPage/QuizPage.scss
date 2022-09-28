@@ -1,56 +1,90 @@
 @import "../../scss/Main";
 
-.quiz{
+.quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .header {
+    align-self: center;
+  }
+
+  &__box {
     display: flex;
     flex-direction: column;
     justify-content: center;
-        align-items: center;
-    &__box{
+    align-items: center;
+    min-width: 100%;
+    border-top: none;
+
+    &-questions {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0.5rem;
+      margin-top: 2rem;
+      width: 20rem;
+      height: 22rem;
+      background-image: url("../../assets/photo/beautiful-milky-way-night-sky.jpg");
+      background-size: cover;
+      color: $color-text-white;
+      border: 2px solid $color-dark-purple;
+      border-radius: 5px;
+
+      .quizBox {
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+      }
 
-     
-        &-questions{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            padding: 0.5rem;
-            margin-top: 2rem;
-            width: 20rem;
-            height: 20rem;
-            background-image: url("../../assets/photo/beautiful-milky-way-night-sky.jpg");
-            background-size: cover;
-            color: $color-text-white;
-            border: 2px solid $color-dark-purple;
-            border-radius: 5px;
+      .btnReturn {
+        align-self: flex-end;
+        top: 0.5rem;
+      }
 
-            .quizBox{
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+      .primary {
+        align-self: center;
+        margin-top: 4rem;
+      }
 
-            }
+      .quizText {
+        text-align: center;
+      }
 
-            .btnReturn{
-                align-self:flex-end;
-                top:0.5rem;
-            }
-
-            .primary{
-                align-self:center; 
-            }
-
-            .quizText{
-            text-align: center;
-            }
-
-            .result{
-              font-size: $font-size-XXL;
-              margin: 3rem;
-                }
-        }
+      .result {
+        font-size: $font-size-XXL;
+        margin: 3rem;
+      }
     }
+  }
+}
+
+@media only screen and (min-width: $breakpointM) {
+  .quiz {
+    &__box {
+      border-top: 2px solid $color-sea;
+      &-questions {
+        width: 35rem;
+        height: 35rem;
+      }
+
+      .quizText {
+        font-size: $font-size-XXL;
+      }
+
+      .result {
+        font-size: $font-size-XXL;
+        margin-bottom: 9rem;
+      }
+    }
+  }
+  .quizAnswer {
+    transform: scale(1.9);
+    -webkit-transform-origin-x: 0;
+  }
+}
+
+@media only screen and (min-width: $breakpointL) {
 }

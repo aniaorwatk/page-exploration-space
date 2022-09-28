@@ -1,4 +1,4 @@
-import React, { Key, ReactNode, useState } from "react";
+import React, { ReactNode } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -90,7 +90,7 @@ const Quiz = () => {
                       disableRipple
                       inputProps={{ "aria-labelledby": answer.id }}
                     />
-                    <ListItemText id={answer.id} primary={answer.content} />
+                    <ListItemText className="quizAnswer" id={answer.id} primary={answer.content} />
                   </ListItemButton>
                 </ListItem>
               )
