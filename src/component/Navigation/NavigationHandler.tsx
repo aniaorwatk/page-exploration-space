@@ -31,4 +31,9 @@ export const links = [
         url: '/',
         text: 'Album',
     },
+    {
+        id: 6,
+        url: '/quiz',
+        text: 'Quiz',
+    },
 ];

@@ -50,7 +50,7 @@ const Login = () => {
     <div className="login">
       <div className="login__box">
         <ButtonReturn/>
-        <h1>{labels.login.title}</h1>
+        <h1 className="login__box-h1">{labels.login.title}</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Input
             errors={getErrorLogin({ login: errors.login })}
@@ -61,7 +61,6 @@ const Login = () => {
             inputRequired={inputLogin}
             nameInput={nameInputs.nameLogin}
           />
-
           <Input
             errors={getErrorsPassword({ password: errors.password })}
             labelType={formInputsType.typePassword}
@@ -74,7 +73,6 @@ const Login = () => {
             handleClick={togglePassword}
             nameInput={nameInputs.namePassword}
           />
-
           <ButtonPrimary
             type={buttonType}
             customClassName={buttonClass}
