@@ -15,6 +15,15 @@ const labels = {
       </>
     ),
   },
+
+  welcome:{
+    morning: "morning",
+    afternoon: "afternoon",
+    evening: "evening",
+    night: "night",
+    textWelcomeBeginning: "Good",
+    textWelcomeEnd: "explorer",
+  },
   register: {
     title: "Register",
     emailLabel: "E-mail:",
