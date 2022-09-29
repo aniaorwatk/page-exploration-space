@@ -1,0 +1,8 @@
+@import "../../scss/Main";
+
+.welcomeExplorer{
+    align-self: flex-end;
+    font-size: $font-size-L;
+    color: $color-text-dark;
+    text-shadow: 1px 1px 4px $color-text-white;
+}
