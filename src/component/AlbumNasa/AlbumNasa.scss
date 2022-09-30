@@ -1,5 +1,86 @@
 @import "../../scss/Main";
 
-p{
-    color: azure;
+p {
+  color: azure;
+}
+
+.albumNasa {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    width: 100vw;
+    &-title {
+      color: white;
+      font-size: $font-size-L;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-img {
+      &--photo {
+        margin: 10px;
+        background-color: black;
+        width: 80%;
+        height: 80%;
+        object-position: center;
+      }
+    }
+
+    &-text {
+      text-align: justify;
+    }
+
+    button {
+      margin: 10px 0;
+      align-self: flex-end;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpointL) {
+  .albumNasa {
+    &__box {
+      &-title {
+        color: white;
+        font-size: $font-size-L;
+        width: 70vw;
+      }
+
+      &-img {
+        &--photo {
+          width: 80%;
+          height: 80%;
+        }
+      }
+
+      &-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpointL) {
+  h1 {
+    font-size: $font-size-h1BigHeader;
+  }
+}
+
+@media only screen and (min-width: $breakpointXL) {
+  .header {
+    &__box {
+      width: 70vw;
+    }
+  }
 }

@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
-    width: 100vw;
+    width: 70vw;
     min-height: 40vh;
     background-image: url("../../assets/video/video [MConverter.eu].webp");
     background-size: cover;
@@ -26,22 +26,4 @@
   }
 }
 
-@media only screen and (min-width: $breakpointM) {
-  h1 {
-    font-size: $font-size-h1SmallHeader;
-  }
-}
 
-@media only screen and (min-width: $breakpointL) {
-  h1 {
-    font-size: $font-size-h1BigHeader;
-  }
-}
-
-@media only screen and (min-width: $breakpointXL) {
-  .header {
-    &__box {
-      width: 70vw;
-    }
-  }
-}

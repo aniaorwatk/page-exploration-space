@@ -68,6 +68,10 @@ text:'We have sent you all the information on your e-mail',
     ),
   },
 
+  albumNasa:{
+    textAboutMars:"Mars is sometimes called the Red Planet. It's red because of rusty iron in the ground. Like Earth, Mars has seasons, polar ice caps, volcanoes, canyons, and weather. It has a very thin atmosphere made of carbon dioxide, nitrogen, and argon. Mars, the fourth planet from the sun, is famed for its rusty red appearance. The Red Planet is a cold, desert world with a very thin atmosphere. But the dusty, lifeless (as far as we know it) planet is far from dull. Phenomenal dust storms can grow so large they engulf the entire planet, temperatures can get so cold that carbon dioxide in the atmosphere condenses directly into snow or frost, and marsquakes — a Mars version of an earthquake — regularly shake things up."
+  }
+
 
 };
 

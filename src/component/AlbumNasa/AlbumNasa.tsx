@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import labels from "../../labels";
 import ButtonPrimary from "../Buttons/ButtonPrimary";
 import "./AlbumNasa.scss";
 
@@ -13,7 +14,6 @@ const AlbumNasa = () => {
     "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=";
 
   const [photo, setPhoto] = useState<IPhotoType[]>([]);
-  //   const [datePhoto, setDatePhoto]=useState<IPhotoType[]>([]);
   const [currentPhoto, setCurrentPhoto] = useState(0);
 
   const changePhoto = () => {
@@ -29,8 +29,6 @@ const AlbumNasa = () => {
       .then((res) => {
         setPhoto(res.photos);
         console.log(res.photos);
-        console.log(res.photos);
-        console.log(res.photos);
       })
       .catch((err) => console.error(err));
   }, []);
@@ -38,10 +36,20 @@ const AlbumNasa = () => {
   return (
     <div className="albumNasa">
       <div className="albumNasa__box">
-        <div className="albumNasa__box-img">
-          {photo.length > 0 && <img src={photo[currentPhoto].img_src} />}
-          <p className="albumNasa__box-img--date">{photo[currentPhoto].earth_date}</p>
-        </div >
+        <p className="albumNasa__box-title">Mars photo provided by NASA</p>
+        <div className="albumNasa__box-content">
+          <div className="albumNasa__box-img">
+            {photo.length > 0 && (
+              <img
+                className="albumNasa__box-img--photo"
+                src={photo[currentPhoto].img_src}
+              />
+            )}
+          </div>
+          <p className="albumNasa__box-text">
+            {labels.albumNasa.textAboutMars}
+          </p>
+        </div>
         <ButtonPrimary
           type="button"
           customClassName="primary"
