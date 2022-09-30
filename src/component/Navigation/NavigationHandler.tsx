@@ -28,7 +28,7 @@ export const links = [
     },
     {
         id: 5,
-        url: '/',
+        url: '/album',
         text: 'Album',
     },
     {
