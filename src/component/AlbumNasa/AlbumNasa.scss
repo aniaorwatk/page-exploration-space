@@ -29,8 +29,8 @@ p {
       &--photo {
         margin: 10px;
         background-color: black;
-        width: 80%;
-        height: 80%;
+        width: 80vw;
+        height: 80vw;
         object-position: center;
       }
     }
@@ -57,10 +57,14 @@ p {
 
       &-img {
         &--photo {
-          width: 80%;
-          height: 80%;
+          margin: 10px;
+          background-color: black;
+          width: 15rem;
+          height: 15rem;
+          object-position: center;
         }
       }
+
 
       &-content {
         display: flex;
@@ -72,8 +76,18 @@ p {
 }
 
 @media only screen and (min-width: $breakpointL) {
-  h1 {
-    font-size: $font-size-h1BigHeader;
+  .albumNasa {
+    &__box {
+      width: 70vw;
+      &-title {
+      }
+
+      &-img {
+      }
+    }
+
+    &-content {
+    }
   }
 }
 
