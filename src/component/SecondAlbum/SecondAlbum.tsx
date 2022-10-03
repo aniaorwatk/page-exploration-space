@@ -1,32 +1,26 @@
 import React from "react";
-import data from "./album"
-import photo from "./secondAlbum/brown-and-black-galaxy.jpg"
-import "./SecondAlbum.scss"
+import data from "../../data/album";
+import photo from "./secondAlbum/brown-and-black-galaxy.jpg";
+import "./SecondAlbum.scss";
 
+const SecondAlbum = () => {
+  const photo = "brown-and-black-galaxy.jpg";
 
-const SecondAlbum =()=>{
-
-    const photo = "brown-and-black-galaxy.jpg"
-
-
-    return (
-        <div>
-            {data.map(item => {
-                console.log(item.src);
-        return (
+  return (
+    <div className="secondAlbum">
+      <div className="secondAlbum__box">
+        {data.map((item) => {
+          console.log(item.src);
+          return (
             <div key={item.id}>
-           <p>{item.title}</p>     
-           <img  key={item.id} src={`${item.src}`} alt="dsdadsdad" />
-         
-           
-         
-           
-           </div>
-        )
-    }) }
+              <p>{item.title}</p>
+              <img  src={`${item.src}`} alt="dsdadsdad" />
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-
-export default SecondAlbum
+export default SecondAlbum;
