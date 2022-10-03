@@ -23,11 +23,14 @@ const AlbumNasa = () => {
 
   useEffect(() => {
     fetch(`${URL_NASA}${APY_KEY_NASA}`, {
+      
+
       method: "GET",
     })
       .then((res) => res.json())
       .then((res) => {
         setPhoto(res.photos);
+  
         console.log(res.photos);
       })
       .catch((err) => console.error(err));
