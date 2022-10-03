@@ -6,10 +6,12 @@
   justify-content: center;
   width: 100vw;
   background-color: $color-bg-white;
+  opacity: 0.8;
   &__box {
     display: flex;
     justify-content: flex-end;
     width: 100vw;
+    
   }
 }
 
