@@ -33,7 +33,7 @@ export default [
   },
   {
     id: 7,
-    title: "Purple and brown colored planet",
+    title: "Purple and brown planet",
     src: "https://images.pexels.com/photos/39561/solar-flare-sun-eruption-energy-39561.jpeg?cs=srgb&dl=pexels-pixabay-39561.jpg&fm=jpg"
   },
   {

@@ -13,7 +13,7 @@ const SecondAlbum = () => {
           console.log(item.src);
           return (
             <div key={item.id}>
-              <p>{item.title}</p>
+              <p className="secondAlbum__box-title">{item.title}</p>
               <img  src={`${item.src}`} alt="dsdadsdad" />
             </div>
           );

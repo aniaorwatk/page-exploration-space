@@ -1,43 +1,64 @@
 @import "../../scss/Main";
 
-.albumPage{
-&__box{
-   width: 100vw;
-   flex-direction: column;
-display: flex;
-justify-content: center;
-align-items: center; 
-img{
-    width: 80vw;
-    height: 80vw;
-    object-position: center;
-}
-
-}
-
-}
-.secondAlbum{
-    
-
-&__box{
-    align-items: center;
+.albumPage {
+  &__box {
+    width: 100vw;
+    flex-direction: column;
     display: flex;
-    justify-content: space-around; 
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .btnReturn{
+margin-top: 1rem;
+    }
+    .secondAlbum{
+        margin: 2rem 0;
+&__box{
+  &-title{
+    margin-top: 1rem ;
+        font-size: $font-size-M;
+        color: $color-text-white;
+    }  
 }
 
-}
-
-
-
-
-@media only screen and (min-width: $breakpointXL) {
-    .secondAlbum {
-      width: 70vw;
-      img{
-    width: 21vw;
-    height: 21vw;
-    object-position: center;
-}
+    }
+    
+    img {
+      width: 80vw;
+      height: 80vw;
+      object-position: center;
     }
   }
+}
+.secondAlbum {
+  &__box {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: $breakpointM) {
+  .secondAlbum {
+    img {
+      width: 40vw;
+      height: 40vw;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpointL) {
+  .secondAlbum {
+    img {
+      width: 21vw;
+      height: 21vw;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpointXL) {
+  .secondAlbum {
+    width: 70vw;
+  }
+}

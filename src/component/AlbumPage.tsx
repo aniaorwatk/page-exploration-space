@@ -11,7 +11,6 @@ const AlbumPage = () => {
       <div className="albumPage__box">
         <ButtonReturn />
         <SecondAlbum />
-
       </div>
     </div>
   );
