@@ -17,8 +17,9 @@
     font-family: $font-orbitron;
     text-shadow: 0px 0px 1px $color-text-black;
 
-    h1 {
+    &-title {
       color: $color-text-white;
+      font-size: $font-size-h1SmallHeader;
     }
     .header__span {
       color: $color-sea;
@@ -26,4 +27,14 @@
   }
 }
 
+@media only screen and (min-width: $breakpointXL) {
+  .header {
+    &__box {
+      width: 70vw;
 
+      &-title {
+        font-size: $font-size-h1BigHeader;
+      }
+    }
+  }
+}

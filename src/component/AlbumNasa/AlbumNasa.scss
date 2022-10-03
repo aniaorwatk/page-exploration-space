@@ -1,7 +1,10 @@
 @import "../../scss/Main";
 
-p {
-  color: azure;
+.main {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .albumNasa {
@@ -16,8 +19,9 @@ p {
     margin: 20px;
     width: 100vw;
     &-title {
-      color: white;
+      color: $color-text-white;
       font-size: $font-size-L;
+      text-shadow: 1px 1px 5px $color-khaki;
     }
 
     &-content {
@@ -37,6 +41,8 @@ p {
 
     &-text {
       text-align: justify;
+      font-size: $font-size-S;
+      color: $color-text-white;
     }
 
     button {
@@ -50,51 +56,47 @@ p {
   .albumNasa {
     &__box {
       &-title {
-        color: white;
-        font-size: $font-size-L;
-        width: 70vw;
+        margin-bottom: 1rem;
+        font-size: $font-size-XXL;
       }
-
       &-img {
         &--photo {
           margin: 10px;
           background-color: black;
-          width: 15rem;
-          height: 15rem;
+          width: 14rem;
+          height: 14rem;
           object-position: center;
         }
       }
-
-
       &-content {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
       }
-    }
-  }
-}
-
-@media only screen and (min-width: $breakpointL) {
-  .albumNasa {
-    &__box {
-      width: 70vw;
       &-title {
+        font-size: $font-size-XL;
       }
 
-      &-img {
+      &-text {
+        font-size: $font-size-M;
       }
-    }
-
-    &-content {
     }
   }
 }
 
 @media only screen and (min-width: $breakpointXL) {
-  .header {
+  .albumNasa {
+    width: 70vw;
     &__box {
-      width: 70vw;
+      &-title {
+        font-size: $font-size-XXL;
+      }
+
+      &-text {
+        text-align: justify;
+        font-size: $font-size-L;
+        color: $color-text-white;
+      }
     }
   }
 }
