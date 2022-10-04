@@ -1,3 +1,5 @@
+import photo from "../../public/image/pexels-philippe-donn-1169754.jpg"
+
 
 
 export default [
@@ -5,6 +7,7 @@ export default [
     id: 1,
     title: "Brown and black galaxy",
     src: "https://images.pexels.com/photos/6444367/pexels-photo-6444367.jpeg?cs=srgb&dl=pexels-jeremy-m%C3%BCller-6444367.jpg&fm=jpg"
+    // src: "pexels-philippe-donn-1169754.jpg"
   },
   {
     id: 2,
