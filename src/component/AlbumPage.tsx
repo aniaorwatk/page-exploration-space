@@ -4,15 +4,19 @@ import Header from "./Header/Header";
 import SecondAlbum from "./SecondAlbum/SecondAlbum";
 import photo from "../assets/secondAlbum/brown-and-black-galaxy.jpg"
 
+
+
+{/* <div className="albumPage"></div>
+   </div> */}
 const AlbumPage = () => {
   return (
-    <div className="albumPage">
+    <>
       <Header />
       <div className="albumPage__box">
         <ButtonReturn />
         <SecondAlbum />
       </div>
-    </div>
+    </>
   );
 };
 
