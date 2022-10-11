@@ -8,10 +8,7 @@ const Main = () => {
     <>
       <Header />
       <Settings />
-      <div className="main">
       <AlbumNasa />  
-      </div>
-      
     </>
   );
 };

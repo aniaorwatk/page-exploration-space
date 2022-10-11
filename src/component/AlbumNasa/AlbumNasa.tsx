@@ -23,14 +23,12 @@ const AlbumNasa = () => {
 
   useEffect(() => {
     fetch(`${URL_NASA}${APY_KEY_NASA}`, {
-      
-
       method: "GET",
     })
       .then((res) => res.json())
       .then((res) => {
         setPhoto(res.photos);
-  
+
         console.log(res.photos);
       })
       .catch((err) => console.error(err));
@@ -41,15 +39,15 @@ const AlbumNasa = () => {
       <div className="albumNasa__box">
         <p className="albumNasa__box-title">Mars photo provided by NASA</p>
         <div className="albumNasa__box-content">
-          <div className="albumNasa__box-img">
+          <div className="albumNasa__box-content--img">
             {photo.length > 0 && (
               <img
-                className="albumNasa__box-img--photo"
+                className="albumNasaPhoto"
                 src={photo[currentPhoto].img_src}
               />
             )}
           </div>
-          <p className="albumNasa__box-text">
+          <p className="albumNasa__box-content--text">
             {labels.albumNasa.textAboutMars}
           </p>
         </div>
