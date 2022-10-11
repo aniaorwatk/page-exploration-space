@@ -1,5 +1,6 @@
 @import "../../scss/Main";
 
+
 .secondAlbum {
   margin: 2rem;
   display: flex;
@@ -36,14 +37,9 @@
 
 }
 
-
-
-
 @media only screen and (min-width: $breakpointM) {
   .secondAlbum {
-    &__box{
 
-    }
     img {
       width: 40vw;
       height: 40vw;
