@@ -3,7 +3,7 @@
 .header {
   display: flex;
   justify-content: center;
-  width: 100vw;
+  min-width: 100vw;
   &__box {
     display: flex;
     flex-direction: column;
@@ -29,6 +29,7 @@
 
 @media only screen and (min-width: $breakpointXL) {
   .header {
+    
     &__box {
       width: 70vw;
 

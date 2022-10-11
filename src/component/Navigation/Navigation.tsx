@@ -52,7 +52,7 @@ const Navigation = () => {
         className="navigation__box-openMenuBtn"
         onClick={toggleMenu}
       >
-        <img src={bars} />
+        <img src={bars} className="navigation__img"/>
       </button>
     </div>
   );
