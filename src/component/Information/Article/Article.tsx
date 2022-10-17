@@ -19,9 +19,7 @@ const Article =()=>{
  <p>{item.firstPartArticle} </p>
 {!articleShown &&<span onClick={toggleArticle}>Learn less</span>}
 
-{/* <Link to={`${item.id}`}>
-<span>Learn More</span>
-                    </Link> */}
+
             </div>
           );
         })}
