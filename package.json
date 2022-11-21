@@ -50,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/types": "^7.20.0",
     "sass": "^1.54.9"
   }
 }

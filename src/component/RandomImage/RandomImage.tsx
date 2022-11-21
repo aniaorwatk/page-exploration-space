@@ -1,14 +1,13 @@
-import {  TextField } from "@mui/material";
-import React from "react";
+import { TextField } from "@mui/material";
 import labels from "../../labels";
 import ButtonPrimary from "../Buttons/ButtonPrimary";
 import "./RandomImage.scss";
 
 const RandomImage = () => {
+  const getMemeImage = () => {
+    return <div></div>;
+  };
 
-const getMemeImage=()=>{
-
-}
   return (
     <div className="randomImage">
       <h3>{labels.randomImage.title}</h3>
@@ -33,12 +32,9 @@ const getMemeImage=()=>{
           onClick={getMemeImage}
         />
       </div>
-      <img src="nnn" className="randomImage__img" />
+      <img src="nnn" className="randomImage__img" alt="meme img" />
     </div>
   );
-
-
-
 };
 
 export default RandomImage;

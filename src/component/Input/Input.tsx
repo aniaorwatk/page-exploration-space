@@ -31,6 +31,8 @@ const Input = ({
   autocomplete,
 }: IInputType) => {
 
+  
+
 
   return (
     <div className="InputBox">
