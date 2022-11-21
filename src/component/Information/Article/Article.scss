@@ -1,1 +1,17 @@
 @import "../../../scss/Main";
+
+.article{
+    margin: 15px 0;
+    &__title{
+       text-shadow: 2px 2px 2px $color-green;
+    }
+
+    &__text{
+        display: flex;
+        &-learn{
+            font-size: $font-size-XS;
+            color: $color-green;
+        }
+    }
+
+}
