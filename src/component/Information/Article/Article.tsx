@@ -1,30 +1,49 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import data from "./../../../data/information"
 import "./Article.scss";
 
-const Article =()=>{
-
-    const [articleShown, setArticleShown] = useState(false);
-    const toggleArticle = () => {
-        setArticleShown(!articleShown);
-    };
-    return(
-        <article>
-             {data.map((item) => {
-          return (
-            <div className="secondAlbum__box-album--photo" key={item.id}>
-              <h3 className="secondAlbum__box-album--title">{item.title}</h3>
-              {articleShown && <p>{item.firstPartArticle} <span onClick={toggleArticle}>Learn More</span></p>} 
- <p>{item.firstPartArticle} </p>
-{!articleShown &&<span onClick={toggleArticle}>Learn less</span>}
-
-
-            </div>
-          );
-        })}
-        </article>
-    )
+interface ITypArticle {
+  id: number;
+  on: boolean;
+  title: string;
+  firstPartArticle: string | JSX.Element;
+  fullAricle: string | JSX.Element;
+  toggle: (id: number) => void;
+  children?: React.ReactNode;
 }
 
-export default Article
+const Article = ({
+  id,
+  on,
+  title,
+  firstPartArticle,
+  fullAricle,
+  toggle,
+}: ITypArticle) => {
+
+  // const learn = {
+
+  //           <span className="article__text-learn" onClick={() => toggle(id)}>
+  //         {on ? "Learn less" : "Learn more..."}
+  //       </span>  
+
+  // }
+  return (
+    <div className="article">
+      <h3 className="article__title">{title}</h3>
+      <div className="article__text" >
+        {on ? (
+          <article className="article__text-full">{fullAricle}<span className="article__text-learn" onClick={() => toggle(id)}>
+          {on ? "Learn less" : "Learn more..."}
+        </span>  </article>
+        ) : (
+          <article className="article__text-short">
+            {firstPartArticle}             <span className="article__text-learn" onClick={() => toggle(id)}>
+          {on ? "Learn less" : "Learn more..."}
+        </span>  
+          </article>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Article;

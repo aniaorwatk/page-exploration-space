@@ -44,6 +44,7 @@ const AlbumNasa = () => {
               <img
                 className="albumNasaPhoto"
                 src={photo[currentPhoto].img_src}
+                alt={labels.albumNasa.altImg}
               />
             )}
           </div>
