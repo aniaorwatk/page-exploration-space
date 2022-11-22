@@ -2,6 +2,7 @@ import React from "react";
 import Article from "./Article/Article";
 import data from "./../../data/information";
 import "./Information.scss";
+import ButtonReturn from "../Buttons/ButtonReturn/ButtonReturn";
 
 const Information = () => {
   const [articles, setArticles] = React.useState(data);
@@ -26,12 +27,14 @@ const Information = () => {
     />
   ));
 
-  return <div className="informationBox">
-    <h2>Information</h2>
-    
-    {squareElements}
-    
-    </div>;
+  return (
+    <div className="informationBox">
+      <h2>Information</h2>
+
+      {squareElements}
+      <ButtonReturn/>
+    </div>
+  );
 };
 
 export default Information;
