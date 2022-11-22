@@ -1,8 +1,12 @@
+import { useEffect, useState } from "react";
 import { TextField } from "@mui/material";
-import { useState } from "react";
 import labels from "../../labels";
 import ButtonPrimary from "../Buttons/ButtonPrimary";
 import "./RandomImage.scss";
+
+interface ITypeRandomImage{
+  url:string
+}
 
 const RandomImage = () => {
   const [meme, setMeme] = useState({
@@ -10,17 +14,24 @@ const RandomImage = () => {
     bottomText: "",
     randomImage: "http://i.imgflip.com/1bij.jpg" 
 })
-const [allMemeImages, setAllMemeImages] = useState("")
+const [allMemeImages, setAllMemeImages] = useState<ITypeRandomImage[]>([])
+
+
+useEffect(() => {
+  fetch("https://api.imgflip.com/get_memes")
+      .then(res => res.json())
+      .then(data => setAllMemeImages(data.data.memes))
+}, [])
 
 
 function getMemeImage() {
-    // const memesArray = allMemeImages.data.memes
-    // const randomNumber = Math.floor(Math.random() * memesArray.length)
-    // const url = memesArray[randomNumber].url
-    // setMeme(prevMeme => ({
-    //     ...prevMeme,
-    //     randomImage: url
-    // }))
+    // const memesArray = allMemeImages?.data.memes
+    const randomNumber = Math.floor(Math.random() * allMemeImages.length)
+    const url = allMemeImages[randomNumber].url
+    setMeme(prevMeme => ({
+        ...prevMeme,
+        randomImage: url
+    }))
     
 }
 
