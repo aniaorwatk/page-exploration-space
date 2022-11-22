@@ -1,23 +1,38 @@
 @import "../../scss/Main";
 
-.randomImage{
-color: $color-sea;
-    background-color: $color-text-white;
+.randomImageBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .randomImage {
     display: flex;
+    align-self: center;
+    justify-content: center;
+    max-width: 70rem;
+
     flex-direction: column;
-    align-items: center;
-    &__form{
-        display: flex;
-        flex-direction: column;
+
+    color: $color-sea;
+    background-color: $color-text-white;
+    padding: 1rem;
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-self: center;
+      height: 13rem;
     }
-&__meme{
-    position: relative;
-    &-img {
-        max-width: 25rem;
+    &__meme {
+      position: relative;
+      align-self: center;
+      &-img {
+        max-width: 23rem;
         border-radius: 3px;
-    }
-    
-    &-text {
+      }
+
+      &-text {
         position: absolute;
         width: 80%;
         text-align: center;
@@ -28,28 +43,20 @@ color: $color-sea;
         font-family: impact, sans-serif;
         font-size: 2em;
         text-transform: uppercase;
-        color: white;
+        color: $color-text-white;
         letter-spacing: 1px;
-        text-shadow:
-            2px 2px 0 #000,
-            -2px -2px 0 #000,
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            0 2px 0 #000,
-            2px 0 0 #000,
-            0 -2px 0 #000,
-            -2px 0 0 #000,
-            2px 2px 5px #000;
-    }
-    
-    .bottom {
-        bottom: 0;
-    }
-    
-    .top {
-        top: 0;
-    }
-}
-    
-}
+        text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+          -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000,
+          -2px 0 0 #000, 2px 2px 5px #000;
+      }
 
+      .bottom {
+        bottom: 0;
+      }
+
+      .top {
+        top: 0;
+      }
+    }
+  }
+}
