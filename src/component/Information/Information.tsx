@@ -1,8 +1,8 @@
 import React from "react";
 import Article from "./Article/Article";
 import data from "./../../data/information";
-import "./Information.scss";
 import ButtonReturn from "../Buttons/ButtonReturn/ButtonReturn";
+import "./Information.scss";
 
 const Information = () => {
   const [articles, setArticles] = React.useState(data);
@@ -30,7 +30,6 @@ const Information = () => {
   return (
     <div className="informationBox">
       <h2>Information</h2>
-
       {squareElements}
       <ButtonReturn/>
     </div>
