@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import "./Navigation.scss";
 import { bars, closeMenuImg, links } from "./NavigationHandler";
+import "./Navigation.scss";
 
 const Navigation = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -34,7 +34,7 @@ const Navigation = () => {
             className="navigation__box-closeMenuBtn"
             onClick={closeMenu}
           >
-            <img src={closeMenuImg} />
+            <img src={closeMenuImg} alt="close menu"/>
           </button>
           <ul className="navigation__box-list" ref={linksRef}>
             {links.map((link) => {
@@ -52,7 +52,7 @@ const Navigation = () => {
         className="navigation__box-openMenuBtn"
         onClick={toggleMenu}
       >
-        <img src={bars} className="navigation__img"/>
+        <img src={bars} className="navigation__img" alt="open menu"/>
       </button>
     </div>
   );

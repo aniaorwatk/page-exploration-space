@@ -4,14 +4,13 @@
   border-top: 2px solid $color-sea;
   display: flex;
   justify-content: center;
-  width: 100vw;
   background-color: $color-bg-white;
   opacity: 0.8;
+  margin: 0;
   &__box {
     display: flex;
     justify-content: flex-end;
     width: 100vw;
-    
   }
 }
 
@@ -27,7 +26,6 @@
 
 @media only screen and (min-width: $breakpointXL) {
   .settingsBox {
-    // width: 100vw;
     &__box {
       width: 70vw;
       justify-content: flex-end;

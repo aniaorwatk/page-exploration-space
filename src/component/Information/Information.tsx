@@ -1,6 +1,7 @@
 import React from "react";
-import Article from "./Article/Article";
 import data from "./../../data/information";
+import labels from "../../labels";
+import Article from "./Article/Article";
 import ButtonReturn from "../Buttons/ButtonReturn/ButtonReturn";
 import "./Information.scss";
 
@@ -15,23 +16,26 @@ const Information = () => {
     });
   }
 
-  const squareElements = articles.map((article) => (
-    <Article
-      key={article.id}
-      id={article.id}
-      on={article.on}
-      toggle={toggle}
-      title={article.title}
-      firstPartArticle={article.firstPartArticle}
-      fullAricle={article.fullAricle}
-    />
-  ));
+  const articleElements = articles.map((article) => {
+    const { id, on, title, firstPartArticle, fullAricle } = article;
+    return (
+      <Article
+        key={id}
+        id={id}
+        on={on}
+        toggle={toggle}
+        title={title}
+        firstPartArticle={firstPartArticle}
+        fullAricle={fullAricle}
+      />
+    );
+  });
 
   return (
     <div className="informationBox">
-      <h2>Information</h2>
-      {squareElements}
-      <ButtonReturn/>
+      <h2>{labels.information.title}</h2>
+      {articleElements}
+      <ButtonReturn />
     </div>
   );
 };
