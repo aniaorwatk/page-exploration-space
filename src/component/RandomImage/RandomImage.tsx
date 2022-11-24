@@ -15,9 +15,10 @@ const RandomImage = () => {
     randomImage: "http://i.imgflip.com/1bij.jpg",
   });
   const [allMemeImages, setAllMemeImages] = useState<ITypeRandomImage[]>([]);
+  const URL ="https://api.imgflip.com/get_memes";
 
   useEffect(() => {
-    fetch("https://api.imgflip.com/get_memes")
+    fetch(URL)
       .then((res) => res.json())
       .then((data) => setAllMemeImages(data.data.memes));
   }, []);
@@ -47,7 +48,7 @@ const RandomImage = () => {
           <TextField
             sx={{ maxWidth: "30ch" }}
             id="demo-helper-text-misaligned-no-helper"
-            label="Top text"
+            label={labels.randomImage.labelTopText}
             className="form--input"
             name="topText"
             value={meme.topText}
@@ -56,13 +57,12 @@ const RandomImage = () => {
           <TextField
             sx={{ maxWidth: "30ch" }}
             id="demo-helper-text-misaligned-no-helper"
-            label="Bottom text"
+            label={labels.randomImage.labelBottomText}
             className="form--input"
             name="bottomText"
             value={meme.bottomText}
             onChange={handleChange}
           />
-
           <ButtonPrimary
             customClassName={"primary"}
             type={"button"}
@@ -74,7 +74,7 @@ const RandomImage = () => {
           <img
             src={meme.randomImage}
             className="randomImage__meme-img"
-            alt="meme img"
+            alt={labels.randomImage.altMemeImg}
           />
           <h2 className="randomImage__meme-text top">{meme.topText}</h2>
           <h2 className="randomImage__meme-text bottom">{meme.bottomText}</h2>

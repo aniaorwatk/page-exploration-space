@@ -1,3 +1,4 @@
+import labels from "../../../labels";
 import "./Article.scss";
 
 interface ITypArticle {
@@ -7,7 +8,6 @@ interface ITypArticle {
   firstPartArticle?: string | JSX.Element;
   fullAricle?: string | JSX.Element;
   toggle: (id: number) => void;
-  children?: React.ReactNode;
 }
 
 const Article = ({
@@ -25,7 +25,7 @@ const Article = ({
         <article>
           {on ? fullAricle : firstPartArticle}
           <span className="article__text-learn" onClick={() => toggle(id)}>
-            {on ? "Learn less" : "Learn more..."}
+            {on ? labels.information.textLess : labels.information.textMore}
           </span>
         </article>
       </div>

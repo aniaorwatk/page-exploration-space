@@ -1,18 +1,14 @@
-import photo from "../../public/image/pexels-philippe-donn-1169754.jpg"
 
-
-
-export default [
+const dataAlbum =[
   {
     id: 1,
     title: "Brown and black galaxy",
-    src: "https://images.pexels.com/photos/6444367/pexels-photo-6444367.jpeg?cs=srgb&dl=pexels-jeremy-m%C3%BCller-6444367.jpg&fm=jpg"
-    // src: "pexels-philippe-donn-1169754.jpg"
+    src: "https://images.pexels.com/photos/6444367/pexels-photo-6444367.jpeg?cs=srgb&dl=pexels-jeremy-m%C3%BCller-6444367.jpg&fm=jpg",
   },
   {
     id: 2,
     title: "Comet in Space",
-    src:"https://images.pexels.com/photos/5086477/pexels-photo-5086477.jpeg?cs=srgb&dl=pexels-alex-andrews-5086477.jpg&fm=jpg",
+    src: "https://images.pexels.com/photos/5086477/pexels-photo-5086477.jpeg?cs=srgb&dl=pexels-alex-andrews-5086477.jpg&fm=jpg",
   },
   {
     id: 3,
@@ -37,7 +33,7 @@ export default [
   {
     id: 7,
     title: "Purple and brown planet",
-    src: "https://images.pexels.com/photos/39561/solar-flare-sun-eruption-energy-39561.jpeg?cs=srgb&dl=pexels-pixabay-39561.jpg&fm=jpg"
+    src: "https://images.pexels.com/photos/39561/solar-flare-sun-eruption-energy-39561.jpeg?cs=srgb&dl=pexels-pixabay-39561.jpg&fm=jpg",
   },
   {
     id: 8,
@@ -51,3 +47,4 @@ export default [
   },
 ];
 
+export default dataAlbum
