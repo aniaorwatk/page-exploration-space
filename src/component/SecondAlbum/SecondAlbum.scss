@@ -1,8 +1,7 @@
 @import "../../scss/Main";
 
-
 .secondAlbum {
-  margin: 2rem;
+  // margin: 2rem;
   display: flex;
   justify-content: center;
 
@@ -12,34 +11,34 @@
   }
 
   &__box {
-    width:100vw ;
+    width: 100vw;
     display: flex;
     align-items: center;
     flex-direction: column;
-    &-album{
+    &-album {
       display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+      justify-content: space-around;
+      flex-wrap: wrap;
 
-    &--title {
-      margin-top: 1rem;
-      font-size: $font-size-M;
-      color: $color-text-white;
+      &--title {
+        margin-top: 1rem;
+        font-size: $font-size-M;
+        color: $color-text-white;
+      }
     }
-  }
   }
 
   img {
-  width: 80vw;
-  height: 80vw;
-  object-position: center;
-}
-
+    width: 80vw;
+    height: 80vw;
+    object-position: center;
+    object-fit: cover;
+    
+  }
 }
 
 @media only screen and (min-width: $breakpointM) {
   .secondAlbum {
-
     img {
       width: 40vw;
       height: 40vw;
@@ -58,14 +57,13 @@
 
 @media only screen and (min-width: $breakpointXL) {
   .secondAlbum {
-    &__box{
-      width: 70vw; 
+    &__box {
+      width: 70vw;
     }
 
     img {
       width: 21vw;
       height: 21vw;
     }
-    
   }
 }
