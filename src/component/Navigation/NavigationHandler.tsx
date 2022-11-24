@@ -1,4 +1,3 @@
-import React from "react";
 import circleXmark from "../../assets/photo/circle-xmark-regular.svg"
 import barsSolid from "../../assets/photo/bars-solid.svg"
 
