@@ -1,4 +1,3 @@
-import React from "react";
 import { LiteralUnion, MultipleFieldErrors, Ref } from "react-hook-form";
 import eyeOn from "../../assets/photo/eye-regular.svg";
 import eyeOff from "../../assets/photo/eye-slash-regular.svg";

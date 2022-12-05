@@ -1,4 +1,3 @@
-import React from "react";
 import ButtonPrimary from "../Buttons/ButtonPrimary";
 import ButtonReturn from "../Buttons/ButtonReturn/ButtonReturn";
 import "./Game.scss";

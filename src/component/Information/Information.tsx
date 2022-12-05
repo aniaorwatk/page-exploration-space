@@ -1,12 +1,13 @@
-import React from "react";
-import data from "./../../data/information";
+import { useState } from "react";
 import labels from "../../labels";
 import Article from "./Article/Article";
 import ButtonReturn from "../Buttons/ButtonReturn/ButtonReturn";
+import data from "./../../data/information";
 import "./Information.scss";
 
+
 const Information = () => {
-  const [articles, setArticles] = React.useState(data);
+  const [articles, setArticles] = useState(data);
 
   function toggle(id: number) {
     setArticles((prevArticles) => {
