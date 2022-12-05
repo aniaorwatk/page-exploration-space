@@ -1,1 +1,17 @@
 @import "../../../scss/Main";
+.diceContainerMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:$color-bg-gray;
+    height: 400px;
+    max-width: 1000px;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+.diceContainer {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 20px;
+}

@@ -1,51 +1,44 @@
+import { useState } from "react";
+import ButtonPrimary from "../../Buttons/ButtonPrimary";
 import Die from "./Die/Die";
-import "./GameTenzies.scss"
+import "./GameTenzies.scss";
+import { getAllDice } from "./GameTenziesHandler";
 
-const GameTenzies =()=>{
+const GameTenzies = () => {
 
-const randomNumber = Math.floor(Math.random() * 6);
+   
+ const [dice, setDice]= useState(getAllDice())
+
+
+  
  
+ const diceArray = dice.map(item=>{
     return(
-        <div>
-<Die 
-value={randomNumber}
-/>
-<Die 
-value={randomNumber}
-/>
-<Die 
-value={randomNumber}
-/>
-<Die 
-value={randomNumber}
-/>
-<Die 
-value={randomNumber}
-/>
-<Die 
-value={randomNumber}
-/>
-<Die 
-value={randomNumber}
-/>
-<Die 
-value={randomNumber}
-/>
-<Die 
-value={randomNumber}
-/>
-<Die 
-value={randomNumber}
-/>
-<Die 
-value={randomNumber}
-/>
-<Die 
-value={randomNumber}
-/>
-
-        </div>
+        <Die 
+        value={item}
+   
+        />
     )
+ })
+   
+
+const rollNewDice =()=>{
+    setDice(getAllDice())
 }
 
-export default GameTenzies
+
+ 
+  return (
+    <main className="diceContainerMain">
+      <div className="diceContainer">
+
+{diceArray}
+
+<ButtonPrimary customClassName={"primary"} type={"button"} onClick={rollNewDice} buttonLabel={"Roll"}/>
+
+      </div>
+    </main>
+  );
+};
+
+export default GameTenzies;
