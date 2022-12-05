@@ -22,7 +22,7 @@ export const links = [
     },
     {
         id: 4,
-        url: '/',
+        url: '/game',
         text: 'Game',
     },
     {
