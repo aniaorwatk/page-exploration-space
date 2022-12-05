@@ -86,6 +86,11 @@ const labels = {
     labelBottomText: "Bottom text",
     altMemeImg: "meme img",
   },
+
+  gameTenzies:{
+    title: "Tenzies",
+    description: "Roll until all dice are the same. Click each die to freeze it at its current value between rolls."
+  }
 };
 
 export default labels;

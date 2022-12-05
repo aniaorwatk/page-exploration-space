@@ -3,8 +3,8 @@ import "./Die.scss"
 interface IDieType {
   value: number;
   isHeld:boolean;
-  funClick: (id:number)=>void;
-  id: number
+  funClick: (id:string)=>void;
+  id: string
 }
 
 const Die = ({ value, isHeld, funClick, id }: IDieType) => {

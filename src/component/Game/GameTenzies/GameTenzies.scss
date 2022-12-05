@@ -2,7 +2,8 @@
 .diceContainerMain {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: $color-bg-gray;
   height: 400px;
   max-width: 1000px;
